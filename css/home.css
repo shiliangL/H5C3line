@@ -1,0 +1,170 @@
+/*
+* @Author: Administrator
+* @Date:   2016-10-11 09:08:36
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-10-13 00:55:05
+*/
+
+body{
+    background: #333331;
+    overflow-x: hidden;
+}
+.home-page{
+    color: #61615e;
+    font-family: "proxima-nova", sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.75;
+    cursor: default;
+    position: relative;
+}
+/*顶部开始*/
+.top{
+    width: 100%;
+    /*padding: 40px;*/
+    padding: 25px 0 60px 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: -moz-linear-gradient(top,rgba(0,0,0,.6) 30%,rgba(255,255,255,0) 70%);
+    background: -webkit-gradient(linear, 30% 50%, 80% 100%,from(rgba(0,0,0,.6)), to(rgba(255,255,255,.1)));
+    background: -webkit-gradient(linear, 30% 50%, 70% 100%, from(rgba(0,0,0,.6)), to(rgba(255,255,255,.1)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,.3) 30%, rgba(255,255,255,0) 70%);
+}
+.top .top-log{
+    float: left;
+    margin-left: 10%;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.top .top-log a{
+    display: block;
+    height: 94px;
+    width: 210px;
+}
+.top .top-log img{
+    width: 100%;
+    height: 100%;
+}
+.top .top-menu{
+    float: right;
+    pointer-events: auto;
+    position: relative;
+    margin-right: 10%;
+    margin-top: 36px;
+    z-index: 110;
+    display: block;
+    width: 25px;
+    height: 22px;
+    cursor: pointer;
+}
+.top .top-menu span{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    font-size: 0px;
+    background-color: #FFF;
+}
+.top .top-menu span{
+    transition: transform 0.3s;
+}
+.top .top-menu middle{
+    display: block;
+}
+.top .top-menu span.before{
+    transform: translateY(-10px);
+}
+.top .top-menu span.end{
+    transform: translateY(10px);
+}
+.top a.cancle span.before{
+    transform: translateY(0px) rotate(45deg);
+}
+.top a.cancle span.end{
+    transform: translateY(0px) rotate(-45deg);
+}
+.top a.cancle span.middle{
+    display: none;
+}
+/*顶部结束*/
+
+/**/
+.home-page .js-content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url('../images/bg-main.jpg');
+    background-size: cover;
+    /*background-position: bottom center;*/
+}
+.home-page .js-content .js-item{
+    position: relative;
+    background-size: cover;
+    background-position: bottom center;
+    text-align: center;
+    color: #FFF;
+}
+.home-page .js-content .js-item.blue{
+    background-image: url("../images/header-161012.jpg");
+}
+.home-page .js-content .js-item.blue{
+    /*background-image: url("../images/test02.jpg");*/
+}
+.js-content .js-item .inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    text-transform: uppercase;
+}
+.js-item .inner .intro{
+    color: #35bde4;
+    font-size: 1.8rem;
+}
+.js-item .inner .prob{
+    font-size: 8rem;
+    font-weight: bold;
+}
+.js-content .radios{
+    display: block;
+    height: 140px;
+    position: absolute;
+    right: 10%;
+    margin-right: 4px;
+    top: 50%;
+    margin-top: -70px;
+    width: 15px;
+}
+.js-content .radios a{
+    display: block;
+    color: #fff;
+    display: block;
+    border-radius: 50%;
+    font-size: 3.5rem;
+    height: 18px;
+    line-height: 14px;
+    margin: .4em 0;
+    position: relative;
+    text-align: center;
+    width: 15px;
+    background: #2E2E2E;
+}
+.js-content .radios a.current{
+    background: #0A84E3;
+}
+.js-content .radios svg{
+    color: #fff;
+    display: block;
+    font-size: 3.5rem;
+    height: 18px;
+    line-height: 14px;
+    margin: .4em 0;
+    position: relative;
+    text-align: center;
+    width: 15px;
+}
+/**/

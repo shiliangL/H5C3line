@@ -1,0 +1,1154 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form,
+fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #666;
+    font-size: 14px;
+    font-family: "宋体", "微软雅黑";
+}
+
+td, th, caption {
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+input, textarea, select, button {
+    font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+html {
+    min-width: 1200px;
+}
+
+/* css common */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/*公用部分*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.warp {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*顶部视频*/
+.topShow{
+    width: 100%;
+    overflow: hidden;
+    background: #000000;
+}
+
+
+
+
+#bgSlider{
+    height: 600px;
+    background: url("../images/wellbg.png")repeat-x top center;
+}
+/*顶部开始*/
+.top {
+    width: 100%;
+    /*padding: 40px;*/
+    padding: 25px 0 60px 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, .6) 30%, rgba(255, 255, 255, 0) 70%);
+    background: -webkit-gradient(linear, 30% 50%, 80% 100%, from(rgba(0, 0, 0, .6)), to(rgba(255, 255, 255, .1)));
+    background: -webkit-gradient(linear, 30% 50%, 70% 100%, from(rgba(0, 0, 0, .6)), to(rgba(255, 255, 255, .1)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, .3) 30%, rgba(255, 255, 255, 0) 70%);
+}
+
+.top .top-log {
+    float: left;
+    margin-left: 10%;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.top .top-log a {
+    display: block;
+    height: 94px;
+    width: 210px;
+}
+
+.top .top-log img {
+    width: 100%;
+    height: 100%;
+}
+
+.top .top-menu {
+    float: right;
+    pointer-events: auto;
+    position: relative;
+    margin-right: 10%;
+    margin-top: 36px;
+    z-index: 110;
+    display: block;
+    width: 25px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.top .top-menu span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    font-size: 0px;
+    background-color: #FFF;
+}
+
+.top .top-menu span {
+    transition: transform 0.3s;
+}
+
+.top .top-menu middle {
+    display: block;
+}
+
+.top .top-menu span.before {
+    transform: translateY(-10px);
+}
+
+.top .top-menu span.end {
+    transform: translateY(10px);
+}
+
+.top a.cancle span.before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.top a.cancle span.end {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.top a.cancle span.middle {
+    display: none;
+}
+
+/*顶部结束*/
+
+/*游戏下载区域*/
+.gameDownload {
+    font-family: "微软雅黑";
+    position: relative;
+    margin-top: -40px;
+    height: 110px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #333;
+    background: url("../images/public_spr.png") no-repeat 0px -476px;
+}
+.bilib{
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    top: 0;
+    transform: skew(25deg) translate(-54px,0);
+    transition: all 0.25s;
+    background: -webkit-linear-gradient(left,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0));
+}
+.gameDownload .dGameleft {
+    position: relative;
+    overflow: hidden;
+    height: 110px;
+    width: 220px;
+    text-align: center;
+    float: left;
+}
+.dGameleft:hover .bilib{
+    transform: skew(25deg) translate(230px,0);
+}
+.gameDownload .dGameleft a {
+    font-weight: 400;
+    font-size: 28px;
+    color: #ddff25;
+    line-height: 88px;
+}
+.gameDownload .dGameright {
+    float: left;
+}
+.gameDownload .dGameright li {
+    float: left;
+    padding-top: 15px;
+    width: 112px;
+    height: 100px;
+    text-align: center;
+    line-height: 20px;
+    animation: all 0.34s linear 0.2s;
+}
+.gameDownload .dGameright li:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+.gameDownload .dGameright li span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    animation: all 0.34s linear;
+    transform: scale(1) translate(0, 0px);
+}
+.gameDownload .dGameright li:hover span {
+    transform: scale(1.2) translate(0, -8px);
+}
+.gameDownload .dGameright .e1 {
+    background: url("../images/public_spr.png") 0 0;
+}
+.gameDownload .dGameright .e2 {
+    background: url("../images/public_spr.png") -40px 0;
+}
+.gameDownload .dGameright .e3 {
+    background: url("../images/public_spr.png") -80px 0;
+}
+.gameDownload .dGameright .e4 {
+    background: url("../images/public_spr.png") -120px 0;
+}
+.gameDownload .dGameright .e5 {
+    background: url("../images/public_spr.png") -160px 0;;
+}
+.gameDownload .dGameright .name {
+    display: block;
+    color: #efefef;
+    font-size: 14px;
+    font-weight: bold;
+}
+.gameDownload .dGameright .dc {
+    color: #5e677f;
+    font-size: 12px;
+}
+
+
+/*小小的播图 弱弱 啪啪啪*/
+.ggSilder{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.silderHot {
+    height: 340px;
+    position: relative;
+}
+.silderHot .s_pic{
+    position: absolute;
+    cursor: pointer;
+    width: 780px;
+    height: 330px;
+    overflow: hidden;
+}
+
+.silderHot .show_bnt{
+    position: absolute;
+    top:0;
+    left: 790px;
+
+ }
+.silderHot .show_bnt li{
+    height: 50px;
+    margin-bottom: 6px;
+    font-weight:400;
+    font-family:"微软雅黑";
+    color: #333;
+}
+.silderHot .show_bnt .mc_show{
+    border-left: 2px solid #0FC;
+    padding: 5px;
+    height: 40px;
+    width: 90px;
+    float: left;
+    cursor: pointer;
+    animation: all 0.5s;
+    color: #fff;
+}
+.silderHot .show_bnt .mc_hide{
+    float: left;
+    height:38px;
+    width: 280px;
+    background:#eee;
+    /*display: none;*/
+    padding: 4px 5px;
+
+}
+.show_bnt .mc01{
+    background:#FE4567 ;
+}
+.silderHot .show_bnt li:nth-child(1){
+    background:#FE4567 ;
+}
+.show_bnt .mc02{
+    background:#FC9E9B ;
+}
+.silderHot .show_bnt li:nth-child(2){
+    background:#FC9E9B ;
+}
+.show_bnt .mc03{
+    background:#FCCFB0 ;
+}
+.silderHot .show_bnt li:nth-child(3){
+    background:#FCCFB0 ;
+}
+.show_bnt .mc04{
+    background:#C8C7A8 ;
+}
+.silderHot .show_bnt li:nth-child(4){
+    background:#C8C7A8 ;
+}
+.show_bnt .mc05{
+    background:#AFDAED ;
+}
+.silderHot .show_bnt li:nth-child(5){
+    background:#AFDAED ;
+}
+.show_bnt .mc6{
+    background:#84B298 ;
+}
+.silderHot .show_bnt li:nth-child(6){
+    background:#84B298 ;
+}
+/*颜
+#FE4567
+#FC9E9B
+#FCCFB0
+#C8C7A8
+#AFDAED
+#84B298
+色*/
+
+/*游戏轮播开始------------------------*/
+.banner {
+    position: relative;
+    top: 106px;
+}
+
+#showBox {
+    width: 1200px;
+    height: 530px;
+    margin: 0 auto;
+    background: #ccc;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pis {
+    width: 6000px;
+    height: 530px;
+    position: absolute;
+}
+
+.pis li {
+    width: 1200px;
+    height: 100%;
+    float: left;
+    font-weight: 400;
+    font-size: 400px;
+    text-align: center;
+    line-height: 450px;
+    font-family: "微软雅黑";
+}
+
+/*顶部按键*/
+
+.btns {
+    position: relative;
+    top: 450px;
+    z-index: 10;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.btns div {
+    display: inline-block;
+    width: 120px;
+    height: 64px;
+    background: #000000;
+    margin: 5px;
+}
+
+.btns div.on {
+    background: #ccc;
+}
+
+/*箭头*/
+.arrts {
+    display: none;
+}
+
+.arrt {
+    width: 40px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    z-index: 10;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 45px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#pre {
+    left: 50px;
+}
+
+#next {
+    right: 50px;
+}
+
+/*遮挡层初始化-----------------------------*/
+
+.show_items {
+    position: relative;
+    cursor: pointer;
+}
+
+.show_items .show {
+    position: relative;
+    /*margin-bottom: 120px;*/
+    overflow: hidden;
+    clear: both;
+    /*display: none;*/
+}
+
+
+#heros  .title{
+    border-bottom: 2px solid #FE4567;
+}
+.show_items .itemShow {
+    width: 657px;
+    height: 650px;
+    -webkit-mask-size: 657px 650px; /* mask-image的大小 */
+    /*background: #252621;*/
+    background-image: url("../images/role-1.png");
+    background-position: 10px 38px;
+    -webkit-mask-image: url("../images/mask03.png");
+    background-attachment: fixed;
+
+    transition: all 0.3s ease;
+}
+.itemShow:hover{
+    transform: translate(45px,0) ;/* rotateY(180deg);*/
+}
+.item02 .itemShow{
+    background-image: url("../images/role-2.png");
+    background-position: 520px 38px;
+}
+
+.item03 .itemShow{
+    background-image: url("../images/role-3.png");
+    background-position: -90px 38px;
+}
+.item04 .itemShow{
+    background-image: url("../images/role-4.png");
+    background-position: -600px 38px;
+}
+.item05 .itemShow{
+    background-image: url("../images/role-5.png");
+    background-position: -140px 38px;
+}
+.item06 .itemShow{
+    background-image: url("../images/role-6.png");
+    background-position: -587px 38px;
+}
+.item07 .itemShow{
+    background-image: url("../images/role-7.png");
+    background-position: -127px 38px;
+}
+.item08 .itemShow{
+    background-image: url("../images/role-8.png");
+    background-position: 390px 38px;
+}
+.mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+.mask_in{
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    top:50%;
+    margin-top: -35px;
+    display:inline-block;
+    width: 70px;
+    height: 70px;
+    z-index: 60;
+    background: url("../images/video_cover_ico.png");
+
+    transition: all 0.35s;
+}
+.hero_dc:hover .mask_in{
+    transform: rotate(360deg);
+}
+
+.c_video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+    margin-left: -20px;
+    background: #FFFFFF;
+    background-image: url("../images/Fate-stay-night-2014-Logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*background: rgba(0,0,0,0.45);*/
+}
+
+
+/*英雄描---------------述文本框*/
+.hero_dc {
+    position: absolute;
+    margin-top: 100px;
+    width: 420px;
+    height: 320px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    line-height: 20px;
+    box-shadow:5px 8px 9px rgba(0,0,0,0.3),
+    0 0 60px rgba(0,0,0,0.1) inset;
+
+}
+.hero_dc .jc{
+    font-weight:bold;
+    font-size:15px;
+    margin-bottom: 5px;
+}
+
+
+
+.item01 .hero_dc {
+    right: 50px;
+    top: 0;
+
+}
+
+.item02 .hero_dc {
+    left: 50px;
+    top: 0;
+}
+
+.item03 .hero_dc {
+    right: 50px;
+    top: 0;
+}
+
+.item04 .hero_dc {
+    left: 50px;
+    top: 0;
+}
+
+.item05 .hero_dc {
+    right: 50px;
+    top: 0;
+}
+
+.item06 .hero_dc {
+    left: 50px;
+    top: 0;
+}
+
+.item07 .hero_dc {
+    right: 50px;
+    top: 0;
+}
+
+.item08 .hero_dc {
+    left: 50px;
+    top: 0;
+}
+
+/*小组*/
+
+/*游戏简单介绍*/
+.G_introduce {
+    height: 100px;
+    width: 100%;
+    background: #444;
+}
+
+/*玩家精彩瞬间*/
+.playerShow {
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.playerShow .title{
+    border-bottom: 2px solid #FC9E9B;
+}
+
+.title {
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.title h3 {
+    height: 50px;
+    font-size: 22px;
+    line-height: 50px;
+    font-weight: 400;
+    float: left;
+    color: #333333;
+    font-family: "微软雅黑";
+}
+
+.title a {
+    float: right;
+    font-size: 12px;
+    padding: 27px 20px;
+}
+
+.playerShow .mc {
+    position: relative;
+    z-index: 20;
+}
+
+.playerShow .showGroup {
+    overflow: hidden;
+    z-index: 20;
+    position: relative;
+}
+
+.playerShow .items {
+    width: 280px;
+    height: 300px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5%;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 21;
+    transition: all 0.3s ease;
+    transform: translate(300px, -100px) rotate(360deg);
+}
+
+#cloud {
+    position: absolute;
+    width: 280px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 21;
+}
+
+/*模拟*/
+.items:hover .line {
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+/*修饰图片展示区*/
+
+/*用户登录区域*/
+.login {
+    float: left;
+    width: 350px;
+    height: 110px;
+    padding: 17px 0 0 20px;
+}
+
+.login .login_left {
+    width: 80px;
+    height: 80px;
+    padding-right: 20px;
+}
+
+.login .login_right {
+    width: 250px;
+    height: 110px;
+}
+
+.login .login_right h3 {
+    font-size: 16px;
+    color: #fff;
+}
+
+.login .login_right h3 a {
+    color: #0FC;
+}
+
+.login_right p {
+    color: #C1CFE8;
+    padding-top: 3px;
+}
+
+/*视频中心*/
+.sectionPage {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.videoshow{
+    margin-top: 50px;
+    width: 1200px;
+    height: 780px;
+}
+.videoshow .title{
+    border-bottom: 2px solid #FCCFB0;
+}
+.videoshow .mc {
+    position: relative;
+}
+.v_content > div {
+    /*background: #333;*/
+    cursor: pointer;
+    box-shadow:5px 8px 10px rgba(0,0,0,0.4),
+    0 0 60px rgba(0,0,0,0.2) inset;
+
+}
+.box1,.box2,.box3,.box4,.box5,.box7,.box6,.box8,.box9{
+    width: 390px;
+    height: 228px;
+    float: left;
+    margin: 0 15px 15px 0;
+    overflow: hidden;
+    position: absolute;
+}
+.box1{
+    top: 0;
+    left: 0;
+}
+.box2{
+    top: 0;
+    left: 405px;
+}
+.box3{
+    top: 0;
+    left: 810px;
+}
+
+.box4{
+    top: 243px;
+    left: 0;
+}
+.box5{
+    top: 243px;
+    left: 405px;
+}
+.box6{
+    top: 243px;
+    left: 810px;
+}
+.box7{
+    top: 486px;
+    left: 0;
+}
+.box8{
+    top: 486px;
+    left: 405px;
+}
+.box9{
+    top: 486px;
+    left: 810px;
+}
+
+/*图库tab区域*/
+.tutu {
+    height: 400px;
+    overflow: hidden;
+}
+
+.mc .tab_title {
+    height: 36px;
+    border-bottom: 2px solid #ccc;
+}
+
+.tutu .mc .tab_title li {
+    float: left;
+    display: block;
+    padding: 0 15px;
+    height: 36px;
+    line-height: 33px;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.ontabli {
+    color: #e8215d;
+!important;
+    border-bottom: 2px solid #e8215d;
+}
+
+.tab_content .tab_GG {
+    display: none;
+}
+
+.tab_content .tab_items {
+    position: relative;
+    overflow: hidden;
+    width: 185px;
+    height: 136px;
+    cursor: pointer;
+    color: #333;
+    float: left;
+    margin: 20px 15px 10px 0px;
+}
+
+.tab_items:hover a {
+    color: #e8215d
+}
+
+/*移入特效开始*/
+
+.tab_items span {
+    display: block;
+    position: absolute;
+    background: red;
+    transition: all 0.48s;
+}
+
+.t_line {
+    /*width: 155px;*/
+    height: 1px;
+    top: 6px;
+    left: 15px;
+    width: 0px;
+}
+
+.tab_items:hover .t_line {
+    width: 155px
+}
+
+.tab_items:hover .mak {
+    display: none;
+}
+
+.tab_items img {
+    transition: all 0.48s;
+}
+
+.tab_items:hover img {
+    transform: scale(0.9);
+}
+
+.tab_items:hover {
+    background: #eeeeee;
+}
+
+.x_line {
+    /*width: 155px;*/
+    height: 1px;
+    bottom: 40px;
+    left: 15px;
+    width: 0px;
+}
+
+.tab_items:hover .x_line {
+    width: 155px
+}
+
+.z_line {
+    width: 1px;
+    /*height: 90px;*/
+    bottom: 40px;
+    left: 15px;
+    height: 0px;
+}
+
+.tab_items:hover .z_line {
+    height: 90px;
+}
+
+.y_line {
+    width: 1px;
+    /*height: 90px;*/
+    bottom: 40px;
+    right: 15px;
+    height: 0px;
+}
+
+.tab_items:hover .y_line {
+    height: 90px;
+}
+
+.mak {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 104px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/*移入特效结束*/
+.tab_content .tab_items .pic_name {
+    margin-top: 8px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+/*评论区域*/
+
+.pl_box_left {
+    float: left;
+    width: 840px;
+    height: 300px;
+}
+
+.pl_content {
+    margin-top: 40px;
+    height: 100px;
+    /*overflow: hidden;*/
+    padding: 10px;
+    border: 1px solid #0FC;
+    position: relative;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.loginup {
+    position: absolute;
+    left: 14px;
+    top: -35px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #0FC;
+    line-height: 40px;
+    color: #0FC;
+    text-align: center;
+    font-family: "微软雅黑";
+    font-weight: 400;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.yy_cover {
+    position: absolute;
+    width: 44px;
+    height: 12px;
+    top: -1px;
+    left: 12px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.yy_cover span {
+    position: absolute;
+    display: block;
+    width: 44px;
+    height: 44px;
+    top: -35px;
+    left: 0px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #0FC;
+}
+
+.pl_content textarea {
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    resize: none;
+
+}
+
+.sendto {
+    height: 45px;
+}
+
+.send_pl {
+    margin-right: 10px;
+    width: 107px;
+    height: 35px;
+    margin-top: 4px;
+    font-family: "微软雅黑";
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    background: url(../images/fast_post.png);
+    float: right;
+}
+
+/*评论一下面*/
+
+.pl_down_title {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.pl_down_title h3 {
+    float: left;
+    line-height: 40px;
+    padding-left: 10px;
+    color: #0FC;
+    border-left: 4px solid #0FC;
+}
+
+.pl_ul li {
+    width: 100%;
+    color: #666;
+    padding: 13px 0 11px;
+    border-bottom: 1px dashed #e5e5e5;
+    background-color: rgba(232, 232, 232, 0.53);
+}
+
+.li_box .li_pic {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #333;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.li_box .li_pic img {
+    width: 100%;
+    height:100%;
+}
+.li_box .li_content {
+    float: left;
+    padding-left: 20px;
+    width: 750px;
+    padding-top: 20px;
+}
+.li_content .u_enter{
+    padding: 10px 0;
+    line-height: 22px;
+}
+
+.pl_box_right {
+    float: right;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.pl_box_right .title h3{
+    font-size:16px;
+    padding-left: 10px;
+}
+.pl_box_right .visitor {
+    padding-left: 10px;
+}
+.pl_box_right .visitor  li{
+    width: 62px;
+    height: 60px;
+    overflow: hidden;
+    background: #333;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+}
+.pl_box_right .visitor .v_name{
+    text-align: center;
+    font-size:12px;
+    width: 100%;
+    height: 15px;
+    z-index: 50;
+    position: absolute;
+    bottom:2px;
+    color: #333;
+}
+.pl_box_right .visitor  li img{
+    height: 100%;
+}
+.footer{
+    height:200px;
+    width:100%;
+    margin-top: 80px;
+}
+
+#backTop{
+    position: fixed;
+    cursor: pointer;
+    bottom: 25px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    border: 1px solid #a6a0dd;
+    background: url("../images/btop.png")no-repeat -12px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,319 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fff;
+    color: #666;
+    font-size: 14px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+td, th, caption {
+    font-size: 14px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: none;
+    vertical-align: middle
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+input, textarea, select, button {
+    font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+html {
+}
+
+/* css common */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/*公用部分*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.warp {
+    width: 1160px;
+    margin: 0 auto;
+}
+.top{
+    height: 80px;
+    width: 100%;
+    background: #4B4B4B;
+}
+/*遮挡层初始化*/
+
+.bb {
+    height: 5000px;
+}
+
+.show_items{
+    margin: 0 auto;
+    width: 1160px;
+    height: 1890px;
+    position: relative;
+    top:0px;
+    cursor: pointer;
+}
+.show_items .items{
+    position: absolute;
+    z-index: 5;
+    width: 386px;
+    height: 650px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-mask-size: 386px 650px; /* mask-image的大小 */
+    -webkit-mask-image: url("../images/mask2.png");
+}
+.e1{
+    left:0;
+    background: #888;
+    background-image: url("../images/role-1.png");
+    background-position: -40px -76px;
+}
+.mask_hide{
+    background: #2E2E2E;
+    width:100%;
+    height:100%;
+    display: none;
+}
+.show_items .e1:hover .mask_hide{
+    display: block;
+}
+.e2{
+    left:386px;
+    background: #ccc;
+    background-image: url("../images/role-1.png");
+    background-position: -40px -76px;
+}
+.e3{
+    left:772px;
+    background: #ccc;
+    z-index: 20;
+    background-image: url("../images/role-3.png");
+    background-position: 450px 0px;
+}
+
+.itemsT {
+    position: absolute;
+    z-index: 6;
+    width: 386px;
+    height: 650px;
+    -webkit-mask-size: 386px 650px; /* mask-image的大小 */
+    -webkit-mask-image: url("../images/mask2_01.png");
+
+}
+.e4{
+    left: 193px;
+    top:8px;
+    background: #65c8a5;
+    background-image: url("../images/role-1.png");
+    background-attachment: fixed;
+    background-position: -1040px -76px;
+}
+.e5{
+    left: 579px;
+    top:8px;
+    background: #65c8a5;
+    background-image: url("../images/role-3.png");
+    background-attachment: fixed;
+    background-position: -550px 0px;
+}
+
+.e6{
+    left:192px;
+    top:660px;
+    background: #888;
+    background-image: url("../images/role-6.png");
+    background-position: -90px -76px;
+}
+.e7{
+    left:580px;
+    top:660px;
+    background: #888;
+    background-image: url("../images/role-2.png");
+    background-position: 460px -76px;
+}
+
+.e8{
+    left: 386px;
+    top:660px;
+    background: #65c8a5;
+    background-image: url("../images/role-7.png");
+    background-attachment: fixed;
+    background-position: -1040px -76px;
+}
+
+.e9{
+    left: -2px;
+    top:660px;
+    background: #65c8a5;
+    background-image: url("../images/role-6.png");
+    background-attachment: fixed;
+    background-position: -1090px -76px;
+}
+
+.e10{
+    left: 774px;
+    top:660px;
+    background: #65c8a5;
+    background-image: url("../images/role-2.png");
+    background-attachment: fixed;
+    background-position: -1540px -76px;
+}
+
+
+/*游戏简单介绍*/
+.G_introduce{
+    height:100px;
+    width: 100%;
+    background: #444;
+}
+
+/*玩家精彩瞬间*/
+
+.playerShow{
+    margin-top: 50px;
+    background: #94ffaa;
+    overflow: hidden;
+}
+.playerShow .showGroup{
+    width: 1180px;
+}
+.playerShow .items{
+    width:280px;
+    height: 300px;
+    background: #2E2E2E;
+    border-radius: 5%;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    float: left;
+    cursor: pointer;
+}
+.playerShow .items img{
+    width: 100%;
+}
+
+.ts{
+    width: 657px;
+    height: 650px;
+    -webkit-mask-size: 657px 650px; /* mask-image的大小 */
+    background: #252621;
+    background: url("../images/role-1.png");
+    -webkit-mask-image: url("../images/mask03.png");
+    background-attachment: fixed;
+}
+
+
+
+.top{
+    width: 100%;
+    /*padding: 40px;*/
+    padding: 25px 0 60px 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: -moz-linear-gradient(top,rgba(0,0,0,.6) 30%,rgba(255,255,255,0) 70%);
+    background: -webkit-gradient(linear, 30% 50%, 80% 100%,from(rgba(0,0,0,.6)), to(rgba(255,255,255,.1)));
+    background: -webkit-gradient(linear, 30% 50%, 70% 100%, from(rgba(0,0,0,.6)), to(rgba(255,255,255,.1)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,.3) 30%, rgba(255,255,255,0) 70%);
+}
+.top .top-log{
+    float: left;
+    margin-left: 10%;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.top .top-log a{
+    display: block;
+    height: 94px;
+    width: 210px;
+}
+.top .top-log img{
+    width: 100%;
+    height: 100%;
+}
+.top .top-menu{
+    float: right;
+    pointer-events: auto;
+    position: relative;
+    margin-right: 10%;
+    margin-top: 36px;
+    z-index: 110;
+    display: block;
+    width: 25px;
+    height: 22px;
+    cursor: pointer;
+}
+.top .top-menu span{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    font-size: 0px;
+    background-color: #FFF;
+}
+.top .top-menu span{
+    transition: transform 0.3s;
+}
+.top .top-menu middle{
+    display: block;
+}
+.top .top-menu span.before{
+    transform: translateY(-10px);
+}
+.top .top-menu span.end{
+    transform: translateY(10px);
+}
+.top a.cancle span.before{
+    transform: translateY(0px) rotate(45deg);
+}
+.top a.cancle span.end{
+    transform: translateY(0px) rotate(-45deg);
+}
+.top a.cancle span.middle{
+    display: none;
+}
+/*顶部结束*/
